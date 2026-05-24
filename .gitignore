@@ -1,15 +1,52 @@
+# --- OS files ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- IDE & Editor ---
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.netbeans/
+phpstorm-docker-dev/
+
+# --- Application config ---
 /config.local.php
+
+# --- Smarty templates compiled ---
 /templates_c/*.tpl.php
 /templates_c/*menu.conf.php
-/.php_cs.cache
-/.idea
+
+# --- Composer ---
 /vendor
 /composer.lock
-/coverage
 /composer.phar
 /composer_2.phar
+/bin/
+
+# --- PHP tooling cache ---
+/.php_cs.cache
 /.php-cs-fixer.cache
 /.phpunit.result.cache
+/phpstan.neon
+/phpstan-baseline.neon
+
+# --- Build & coverage ---
 /build
+/coverage
+/clover.xml
+/.coveralls.yml
+
+# --- Test artifacts ---
 /tests/postfixadmin.sqlite.*.test
-/phpstorm-docker-dev/
+
+# --- Environment ---
+.env
+.env.*
+!.env.example
+
+# --- Docker ---
+docker-compose.override.yml
